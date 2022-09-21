@@ -1,14 +1,9 @@
-console.log("hola")
+// const { pwd } = require("./pwd.js");
+
+require("./pwd.js");
+require("./ls.js");
+console.log("hola");
 
 //Output a prompt
-process.stdout.write('prompt > ');
-
-// The stdin 'data' event fires after a user types in a line
-process.stdin.on('data', (data) => {
-  const cmd = data.toString().trim(); //remove the newline
-  
-  if (cmd === "pwd"){
-        process.stdout.write(`Your current directory: ${process.cwd()}`);
-    }
-  process.stdout.write('\nprompt > ');
-});
+process.stdout.write("prompt > ");
+// pwd;
